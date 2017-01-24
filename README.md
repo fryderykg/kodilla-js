@@ -1,0 +1,2 @@
+# kodilla-js
+JavaScript exercise
