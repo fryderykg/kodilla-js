@@ -1,0 +1,12 @@
+.container {
+  padding: 50px; }
+
+#js-whoWin {
+  font-size: 36px;
+  margin: 50px; }
+  #js-whoWin.success {
+    color: green; }
+  #js-whoWin.failure {
+    color: red; }
+
+/*# sourceMappingURL=style.css.map */
