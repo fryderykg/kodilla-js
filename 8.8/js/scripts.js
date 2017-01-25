@@ -1,4 +1,4 @@
-// exercise 8.7  Strings
+// exercise 8.8  Strings
 
 var text = "Papugi koszą trawę, unosząc się nad ziemią 15 centymetrów, na czerwonych dywanach.",
     animal = "Zielone słonie".toUpperCase();
