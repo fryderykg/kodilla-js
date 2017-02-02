@@ -1,6 +1,8 @@
 $(document).ready(function() {
-    var carouselList = $('#carousel').find('ul');
+    var carouselList = $('#carousel').find('ul'),
+        slideTimeout;
 
+    //Move first picture on the end
     function moveFirstSlide() {
         var firstItem = carouselList.find('li:first');
         var lastItem = carouselList.find('li:last');
@@ -8,9 +10,32 @@ $(document).ready(function() {
         carouselList.css({marginLeft:0});
     }
 
-    function changeSlide() {
-        carouselList.animate({'marginLeft': -600}, 500, moveFirstSlide);
+    // move last picture on the front
+    function moveLastSlide() {
+        var firstItem = carouselList.find('li:first');
+        var lastItem = carouselList.find('li:last');
+        firstItem.before(lastItem);
+        carouselList.css({marginLeft:-600});
     }
 
-    setInterval(changeSlide, 3000);
+    function changeSlideRight() {
+        carouselList.animate({'marginLeft': -600}, 500, moveFirstSlide);
+        slideTimeout = setTimeout(changeSlideRight, 3000);
+    }
+
+    function changeSlideLeft() {
+        moveLastSlide();
+        carouselList.animate({'marginLeft': 0}, 500);
+        slideTimeout = setTimeout(changeSlideLeft, 3000);
+    }
+
+    $('#carouselButtonRight').click(function() {
+        clearTimeout(slideTimeout);
+        changeSlideRight();
+    });
+
+    $('#carouselButtonLeft').click(function() {
+        clearTimeout(slideTimeout);
+        changeSlideLeft();
+    });
 });
