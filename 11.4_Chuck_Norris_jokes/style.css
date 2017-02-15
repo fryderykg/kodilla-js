@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background: url("img/content_bg.gif");
+  margin: 0;
+  text-align: center; }
+
+header {
+  background: #000000; }
+  header .header_img {
+    background: url("img/title_bg.jpg") center top no-repeat;
+    height: 205px; }
+  header h1 {
+    color: #dbc1a7;
+    line-height: 200px;
+    margin: 0; }
+
+.joke_wrapper {
+  background: url("img/post_bg_repeat.gif");
+  border: 5px solid #3b3023;
+  margin: 50px auto;
+  max-width: 620px;
+  min-height: 173px;
+  overflow: hidden; }
+  @media (max-width: 620px) {
+    .joke_wrapper {
+      margin: 0 auto; } }
+
+.joke_inner {
+  background: url("img/post_bg.gif") top/contain no-repeat; }
+  .joke_inner button {
+    background-color: #b87230;
+    border: 2px dashed black;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 0 7px #b87230, 0 0 5px 10px rgba(0, 0, 0, 0.3);
+    margin: 50px auto 0;
+    outline: none;
+    padding: 10px;
+    transition: all .3s; }
+    .joke_inner button:hover {
+      background-color: #a57854;
+      box-shadow: 0 0 0 7px #a57854, 0 0 5px 7px rgba(0, 0, 0, 0.3); }
+  .joke_inner p {
+    margin: 50px auto;
+    padding: 20px; }
+
+/*# sourceMappingURL=style.css.map */
